@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mazda RX-8 Climate Control</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    #ac {
+      font-weight: bold;
+    }
+
+    #frontDefrost {
+      font-weight: bold;
+    }
+
+    #rearDefrost {
+      font-weight: bold;
+    }
+
+    #temp {
+      font-weight: bold;
+    }
+
+    #fan {
+      font-weight: bold;
+    }
+
+    #mode {
+      font-weight: bold;
+    }
+
+    #pos {
+      font-weight: bold;
+    }
+
+    #air {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>RX-8 Climate Control</h1>
+
+  <div id="status">Disconnected</div>
+  <button onclick="connectSerial()">Connect to Climate Control</button>
+
+
+  <div id="buttons">
+    <button onclick="sendCommand('fanDown')">Fan -</button>
+    <button onclick="sendCommand('fanUp')">Fan +</button>
+    <button onclick="sendCommand('off')">Off</button>
+    <button onclick="sendCommand('mode')">Mode</button>
+    <button onclick="sendCommand('ac')">A/C</button>
+    <button onclick="sendCommand('frontDefrost')">Front Defrost</button>
+    <button onclick="sendCommand('rearDefrost')">Rear Defrost</button>
+    <button onclick="sendCommand('recirculate')">Recirculate</button>
+    <button onclick="sendCommand('auto')">Auto</button>
+    <button onclick="sendCommand('tempDown')">Temp -</button>
+    <button onclick="sendCommand('tempUp')">Temp +</button>
+    <button onclick="sendCommand('testAuto')">Test Auto</button>
+    <button onclick="sendCommand('testManual')">Test Manual</button>
+    <button onclick="sendCommand('testOff')">Test Off</button>
+    <button onclick="sendCommand('testAmbient')">Test Ambient</button>
+  </div>
+
+  <div id="mode">Mode:</div>
+  <div id="pos">Position:</div>
+  <div id="ac">A/C:</div>
+  <div id="frontDefrost">Front Defrost:</div>
+  <div id="rearDefrost">Rear Defrost:</div>
+  <div id="air">Air:</div>
+  <div id="temp">Temp:</div>
+  <div id="fan">Fan:</div>
+
+  <script src="climate-control.js"></script>
+</body>
+
+</html>
